@@ -3,9 +3,9 @@
 ## To run the API
 
 1. Clone the project
-`git clone ${project_url}`
+   `git clone ${project_url}`
 2. Install the dependencies with npm
-`npm install`
+   `npm install`
 3. Set the enviroment variables on `.env` such as the `.env-example` file
 4. Create a database cluster on [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) and add the connection string to the **MONGO_CLUSTER** at the enviroment variables. Add the User and Password to **MONGO_USER_ADMIN** and **MONGO_PASSWORD** as well.
 5. Run `npm start` at terminal
@@ -19,47 +19,49 @@
 > Requisition:
 >
 > ```json
-> Expected body: 
->{
+> Expected body:
+> {
 > "email": "string",
 > "password": "string",
 > "username": "string"
->}
->```
+> }
+> ```
 >
 > Response:
 >
 > ```json
-> Expected body: 
->{
+> Expected body:
+> {
 > "username": "string",
 > "email": "string",
 > "authentication": {
 > "password": "string",
 > "salt": "string"
->},
+> },
 > "_id": "hex64",
 > "__v": 0
 > }
 > ```
+
 ---
+
 > **[POST] /auth/login**
 >
 > Requisition:
 >
 > ```json
-> Expected body: 
->{
+> Expected body:
+> {
 > "email": "string",
 > "password": "string",
->}
->```
+> }
+> ```
 >
 > Response:
 >
 > ```json
-> Expected body: 
->{
+> Expected body:
+> {
 > "authentication": {
 >  "password": "string",
 >  "salt": "string"
@@ -68,22 +70,24 @@
 > "username": "string",
 > "email": "string",
 > "__v": 0
->}
+> }
 > ```
+
 ---
+
 > **[GET] /users**
 >
 > Requisition:
 >
 > ```json
-> Expected body: 
->{}
->```
+> Expected body:
+> {}
+> ```
 >
 > Response:
 >
 > ```json
-> Expected body: 
+> Expected body:
 > [
 >   {
 >     "_id": "hex64",
@@ -92,22 +96,24 @@
 >     "__v": 0
 >   },
 >   {}...
->]
+> ]
 > ```
+
 ---
+
 > **[DELETE] /users/:id**
 >
 > Requisition:
 >
 > ```json
-> Expected body: 
->{}
->```
+> Expected body:
+> {}
+> ```
 >
 > Response:
 >
 > ```json
-> Expected body: 
+> Expected body:
 >   {
 >     "_id": "hex64",
 >     "username": "string",
@@ -116,24 +122,24 @@
 >   },
 >
 > ```
->
+
 ---
->
+
 > **[PATCH] /users/:id**
 >
 > Requisition:
 >
 > ```json
-> Expected body: 
->{
->  "username": "string",  
->}
->```
+> Expected body:
+> {
+>  "username": "string",
+> }
+> ```
 >
 > Response:
 >
 > ```json
-> Expected body: 
+> Expected body:
 >   {
 >     "_id": "hex64",
 >     "username": "string",

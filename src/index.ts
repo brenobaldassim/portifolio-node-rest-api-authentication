@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import 'dotenv/config'
+import 'dotenv/config';
 import router from './router';
 
 const MONGO_PASSWORD = process.env.MONGO_PASSWORD;
@@ -14,9 +14,11 @@ const MONGO_CLUSTER = process.env.MONGO_CLUSTER;
 const MONGO_URL = `mongodb+srv://${MONGO_USER_ADMIN}:${MONGO_PASSWORD}@${MONGO_CLUSTER}`;
 const app = express();
 
-app.use(cors({
-  credentials: true,
-}));
+app.use(
+  cors({
+    credentials: true,
+  })
+);
 
 app.use(compression());
 app.use(cookieParser());
